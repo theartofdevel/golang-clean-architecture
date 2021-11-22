@@ -1,11 +1,15 @@
 package book
 
-import "ca-library-app/internal/domain/book"
+import (
+	"ca-library-app/internal/domain/book"
+)
 
 type bookStorage struct {
-
 }
 
+func NewStorage() book.Storage {
+	return &bookStorage{}
+}
 
 func (bs *bookStorage) GetOne(uuid string) *book.Book {
 	return nil
