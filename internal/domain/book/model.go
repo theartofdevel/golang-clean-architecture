@@ -2,6 +2,7 @@ package book
 
 import (
 	"ca-library-app/internal/domain/author"
+	"ca-library-app/internal/domain/genre"
 	"fmt"
 )
 
