@@ -1,7 +1,6 @@
 package composites
 
 import (
-<<<<<<< HEAD
 	"ca-library-app/internal/adapters/api"
 	book2 "ca-library-app/internal/adapters/api/book"
 	book3 "ca-library-app/internal/adapters/db/book"
@@ -23,10 +22,6 @@ func NewBookComposite(mongoComposite *MongoDBComposite) (*BookComposite, error) 
 		Service: service,
 		Handler: handler,
 	}, nil
-=======
-	"ca-library-app/internal/adapters/api/book"
-	book3 "ca-library-app/internal/adapters/db/book"
-	book2 "ca-library-app/internal/domain/book"
 )
 
 type BookComposite struct {
@@ -38,5 +33,4 @@ func NewBookComposite() *BookComposite {
 	return &BookComposite{
 		service: book2.NewService(storage),
 	}
->>>>>>> f504895ef6e7d2a563317d66b70d387239c99c8c
 }
