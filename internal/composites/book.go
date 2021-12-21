@@ -22,15 +22,4 @@ func NewBookComposite(mongoComposite *MongoDBComposite) (*BookComposite, error) 
 		Service: service,
 		Handler: handler,
 	}, nil
-)
-
-type BookComposite struct {
-	service book.Service
-}
-
-func NewBookComposite() *BookComposite {
-	storage := book3.NewStorage()
-	return &BookComposite{
-		service: book2.NewService(storage),
-	}
 }

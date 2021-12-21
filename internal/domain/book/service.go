@@ -3,22 +3,23 @@ package book
 import (
 	"ca-library-app/internal/adapters/api/author"
 	"ca-library-app/internal/adapters/api/book"
+	"ca-library-app/internal/adapters/api/genre"
 	"context"
 )
 
 type service struct {
 	storage       Storage
 	authorService author.Service
-	genreService genre.Service
+	genreService  genre.Service
 }
 
 func NewService(storage Storage) book.Service {
 	return &service{storage: storage}
 }
 
-func (s *service) Create(ctx context.Context, dto *CreateBookDTO) *Book {
-	author := s.authorService.GetByUUID(ctx, dto.AuthorUUID)
-	genre := s.genreService.GetByUUID(ctx, dto.AuthorUUID)
+func (s *service) Create(ctx context.Context, dto *book.CreateBookDTO) *Book {
+	//author := s.authorService.GetByUUID(ctx, dto.AuthorUUID)
+	//genre := s.genreService.GetByUUID(ctx, dto.AuthorUUID)
 
 	return nil
 }

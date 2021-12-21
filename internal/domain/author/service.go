@@ -13,7 +13,7 @@ func NewService(storage Storage) author.Service {
 	return &service{storage: storage}
 }
 
-func (s *service) Create(ctx context.Context, dto *CreateAuthorDTO) *Author {
+func (s *service) Create(ctx context.Context, dto *author.CreateAuthorDTO) *Author {
 	return nil
 }
 
