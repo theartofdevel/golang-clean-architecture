@@ -1,9 +1,10 @@
 package config
 
 import (
+	"sync"
+
 	"ca-library-app/pkg/logging"
 	"github.com/ilyakaznacheev/cleanenv"
-	"sync"
 )
 
 type Config struct {
